@@ -29,19 +29,18 @@ public class Main {
 
             //숫자 입력 받기. 코드 반복을 줄이기 위해 if else로 수정
             System.out.print("메뉴의 숫자를 입력해주세요: ");
-            System.out.println();
             try {
                 int selectMenu = scanner.nextInt();
                 if (selectMenu == 0) {
                     exit = true;
-                    System.out.println("프로그램을 종료합니다.");
+                    System.out.println("\n프로그램을 종료합니다.");
                 } else if (selectMenu > 0 && selectMenu <= menuItems.size()) {
-                    System.out.println("선택한 메뉴: " + menuItems.get(selectMenu - 1));
+                    System.out.println("\n선택한 메뉴: " + menuItems.get(selectMenu - 1));
                 } else {
-                    System.out.println("잘못된 선택입니다. 다시 입력해 주세요.");
+                    System.out.println("\n잘못된 선택입니다. 다시 입력해 주세요.");
                 }
             } catch (Exception e) {
-                System.out.println("유효하지 않은 입력입니다. 숫자를 입력해 주세요.");
+                System.out.println("\n유효하지 않은 입력입니다. 숫자를 입력해 주세요.");
                 scanner.next();
             }
             System.out.println();
