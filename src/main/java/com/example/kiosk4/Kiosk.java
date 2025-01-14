@@ -21,9 +21,9 @@ public class Kiosk {
         boolean exit = false;
 
         while (!exit) {
+            System.out.println("[ MAIN MENU ]");
             // List와 Menu 클래스 활용하여 상위 카테고리 메뉴 출력
             for (int i = 0; i < menuList.size(); i++) {
-                System.out.println("[ MAIN MENU ]");
                 System.out.println(i + 1 + ". " + menuList.get(i).getCategoryName());
             }
             System.out.println("0. 종료 | 종료");
