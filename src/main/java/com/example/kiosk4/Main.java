@@ -27,6 +27,8 @@ public class Main {
         //Menu 리스트 생성
         List<Menu> menuList = new ArrayList<>();
         menuList.add(burgerCategory);
+        menuList.add(DrinkCategory);
+        menuList.add(DessertCategory);
 
         // Kiosk 객체 생성
         Kiosk kiosk = new Kiosk(menuList);
