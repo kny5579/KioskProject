@@ -14,6 +14,16 @@ public class Main {
         burgerCategory.addMenuItem(new MenuItem("슈슈버거", 0.65, "통새우살 가득한 버거"));
         burgerCategory.addMenuItem(new MenuItem("불고기버거", 0.5, "불고기 소스와 쇠고기 패티가 어우러진 버거"));
 
+        Menu DrinkCategory = new Menu("Drinks");
+        DrinkCategory.addMenuItem(new MenuItem("콜라",0.2,"시원한 콜라"));
+        DrinkCategory.addMenuItem(new MenuItem("사이다",0.2, "시원한 사이다"));
+        DrinkCategory.addMenuItem(new MenuItem("환타",0.2,"시원한 환타"));
+
+        Menu DessertCategory = new Menu("Desserts");
+        DessertCategory.addMenuItem(new MenuItem("애플파이",0.2,"사과와 시나몬 필링 가득한 파이"));
+        DessertCategory.addMenuItem(new MenuItem("오레오 맥플러리",0.4,"바닐라 아이스크림에 오레오 크럼블이 섞인 디저트"));
+        DessertCategory.addMenuItem(new MenuItem("바닐라 쉐이크",0.3, "바닐라 향이 가득한 밀크쉐이크"));
+
         //Menu 리스트 생성
         List<Menu> menuList = new ArrayList<>();
         menuList.add(burgerCategory);

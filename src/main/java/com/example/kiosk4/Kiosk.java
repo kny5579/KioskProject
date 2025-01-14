@@ -25,7 +25,7 @@ public class Kiosk {
             // List와 Menu 클래스 활용하여 상위 카테고리 메뉴 출력
             for (int i = 0; i < menuList.size(); i++) {
                 System.out.println("[ MAIN MENU ]");
-                System.out.println(i + 1 + ". " + menuList.get(i).getCategory());
+                System.out.println(i + 1 + ". " + menuList.get(i).getCategoryName());
             }
             System.out.println("0. 종료 | 종료");
 
@@ -39,7 +39,7 @@ public class Kiosk {
                 } else if (selectMenuNum > 0 && selectMenuNum <= menuList.size()) {
                     // 입력 받은 숫자가 올바르다면 인덱스로 활용하여 List에 접근하기
                     Menu selectedMenu = menuList.get(selectMenuNum - 1);
-                    System.out.println("[ " + selectedMenu.getCategory().toUpperCase() + " MENU ]");
+                    System.out.println("[ " + selectedMenu.getCategoryName().toUpperCase() + " MENU ]");
                     //Menu가 가진 List<MenuItem>을 반복문을 활용하여 메뉴 출력
                     selectedMenu.showMenuItem();
                     //아이템 숫자 입력 받기

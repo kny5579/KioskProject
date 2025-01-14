@@ -10,16 +10,16 @@ public class Menu {
     private final List<MenuItem> menuItems;
 
     //카테고리 선언
-    private final String category;
+    private final String categoryName;
 
     //생성자를 통해 값 할당
-    public Menu(String category) {
-        this.category = category;
+    public Menu(String categoryName) {
+        this.categoryName = categoryName;
         this.menuItems = new ArrayList<>();
     }
 
-    public String getCategory() {
-        return category;
+    public String getCategoryName() {
+        return categoryName;
     }
 
     //리스트를 리턴하는 함수
