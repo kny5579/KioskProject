@@ -17,6 +17,6 @@ public class MenuItem {
     //메뉴 출력 문구 지정
     @Override
     public String toString() {
-        return String.format("%-15s | w %.1f | %-15s", foodName, price, details);
+        return String.format("%-5s | w %.1f | %-5s", foodName, price, details);
     }
 }
