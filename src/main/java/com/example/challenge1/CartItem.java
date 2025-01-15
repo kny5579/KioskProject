@@ -1,12 +1,12 @@
 package com.example.challenge1;
 
 //장바구니 관리하는 클래스
-public class CartItem extends MenuItem{
+public class CartItem extends MenuItem {
 
     private int quantity;
 
     public CartItem(String foodName, int quantity, double price) {
-        super(foodName,price,null);
+        super(foodName, price, null);
         this.quantity = quantity;
     }
 
@@ -16,8 +16,8 @@ public class CartItem extends MenuItem{
     }
 
     //setter
-    public int plusQuantity() {
-        return ++quantity;
+    public void plusQuantity() {
+        ++quantity;
     }
 
     @Override

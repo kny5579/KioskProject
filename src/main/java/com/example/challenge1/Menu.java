@@ -1,7 +1,5 @@
 package com.example.challenge1;
 
-import com.example.challenge1.MenuItem;
-
 import java.util.ArrayList;
 import java.util.List;
 
