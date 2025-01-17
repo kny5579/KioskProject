@@ -6,7 +6,7 @@ public class CartItem extends MenuItem {
     private int quantity;
 
     public CartItem(String foodName, int quantity, double price) {
-        super(foodName, price, null);
+        super(foodName, price);
         this.quantity = quantity;
     }
 

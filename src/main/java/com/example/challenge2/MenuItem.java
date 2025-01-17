@@ -14,6 +14,13 @@ public class MenuItem {
         this.details = details;
     }
 
+    //생성자. cartItem 클래스에서 사용할 생성자
+    public MenuItem(String foodName, double price) {
+        this.foodName = foodName;
+        this.price = price;
+        this.details = "no details";
+    }
+
     public String getFoodName() {
         return foodName;
     }
