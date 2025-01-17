@@ -29,12 +29,12 @@ public class OrderHandler {
             System.out.println("할인 정보를 입력해주세요.");
             DiscountInfo[] discountInfos = DiscountInfo.values();
             for (int i = 0; i < discountInfos.length; i++) {
-                System.out.println(i+1+". "+discountInfos[i]);
+                System.out.println(i + 1 + ". " + discountInfos[i]);
             }
             int discountInput = scanner.nextInt();
-            if(discountInput>0 && discountInput<=discountInfos.length) {
-                DiscountInfo discountInfo = discountInfos[discountInput-1];
-                System.out.println("주문이 완료되었습니다. 금액은 w "+discountInfo.getTotalPrice(cart)+"원입니다.");
+            if (discountInput > 0 && discountInput <= discountInfos.length) {
+                DiscountInfo discountInfo = discountInfos[discountInput - 1];
+                System.out.println("주문이 완료되었습니다. 금액은 w " + discountInfo.getTotalPrice(cart) + "원입니다.");
                 cart.resetCartList(); // 주문 후 장바구니 초기화
             } else System.out.println("잘못된 입력입니다. 다시 입력해 주세요.");
         } else if (finalOrder == 2) return;

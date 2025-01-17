@@ -5,6 +5,7 @@ import com.example.challenge2.handler.OrderHandler;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 //메뉴 관리 및 사용자 입력 처리
 public class Kiosk {
@@ -47,7 +48,7 @@ public class Kiosk {
                     //Menu가 가진 List<MenuItem>을 반복문을 활용하여 메뉴 출력
                     selectedMenu.showMenuItem();
 
-                    if(selectMenuNum==1) {
+                    if (selectMenuNum == 1) {
                         System.out.println("할인 품목은 한 종류만 주문 가능합니다.");
                     }
                     //아이템 숫자 입력 받기
@@ -76,10 +77,8 @@ public class Kiosk {
     private void displayMainOrder() {
         System.out.println("\n[ MAIN MENU ]");
 
-        // List와 Menu 클래스 활용하여 상위 카테고리 메뉴 출력
-        for (int i = 0; i < menuList.size(); i++) {
-            System.out.println(i + 1 + ". " + menuList.get(i).getCategoryName());
-        }
+        // List와 Menu 클래스 활용하여 상위 카테고리 메뉴 출력. stream으로 변경
+        IntStream.range(0, menuList.size()).forEach(i -> System.out.println(i + 1 + ". " + menuList.get(i).getCategoryName()));
         System.out.println("0. 종료 | 종료");
 
         //장바구니에 물건이 있는 경우

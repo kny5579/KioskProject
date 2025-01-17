@@ -1,7 +1,7 @@
 package com.example.challenge2.handler;
 
-import com.example.challenge2.Menu;
 import com.example.challenge2.Cart;
+import com.example.challenge2.Menu;
 import com.example.challenge2.MenuItem;
 
 import java.util.Scanner;

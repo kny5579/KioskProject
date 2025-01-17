@@ -1,7 +1,5 @@
 package com.example.challenge2;
 
-import com.example.challenge2.Cart;
-
 public enum DiscountInfo {
     NATIONAL("국가 유공자", 10),
     SOLDIER("군인", 5),
@@ -25,11 +23,11 @@ public enum DiscountInfo {
     }
 
     public int getTotalPrice(Cart cart) {
-        return cart.calculatePrice() - (cart.calculatePrice()*this.rate/100);
+        return cart.calculatePrice() - (cart.calculatePrice() * this.rate / 100);
     }
 
     @Override
     public String toString() {
-        return String.format("%-5s : %d%%",userType,rate);
+        return String.format("%-5s : %d%%", userType, rate);
     }
 }

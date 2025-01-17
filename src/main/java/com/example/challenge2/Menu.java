@@ -37,7 +37,7 @@ public class Menu {
     //리스트에 들어있는 MenuItem을 순차적으로 보여주는 함수
     public void showMenuItem() {
         //리스트 안에 있는 MenuItem 하나씩 출력 Stream 사용
-        IntStream.range(0,menuItems.size()).forEach(i -> System.out.println(i+1+". "+menuItems.get(i)));
+        IntStream.range(0, menuItems.size()).forEach(i -> System.out.println(i + 1 + ". " + menuItems.get(i)));
         System.out.println("0. 뒤로가기 | 뒤로가기");
     }
 

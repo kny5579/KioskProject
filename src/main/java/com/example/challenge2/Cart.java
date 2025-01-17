@@ -23,9 +23,9 @@ public class Cart {
         //할인되는 버거는 두 종류를 다 담을 수 없도록 stream 기능 구현
         if ("불고기버거".equals(menuItem.getFoodName())) {
             cartList = cartList.stream()
-                    .filter(item ->!"슈슈버거".equals(item.getFoodName()))
+                    .filter(item -> !"슈슈버거".equals(item.getFoodName()))
                     .collect(Collectors.toList());
-        } else if("슈슈버거".equals(menuItem.getFoodName())) {
+        } else if ("슈슈버거".equals(menuItem.getFoodName())) {
             cartList = cartList.stream()
                     .filter(item -> !"불고기버거".equals(item.getFoodName()))
                     .collect(Collectors.toList());
@@ -49,19 +49,13 @@ public class Cart {
 
     //리스트에 들어있는 CartItem을 순차적으로 보여주는 함수(장바구니에 담은 모든 항목 출력)
     public void showCartItem() {
-        //리스트 안에 있는 CartItem 하나씩 출력
-        for (CartItem cartItem : cartList) {
-            System.out.println(cartItem);
-        }
+        //리스트 안에 있는 CartItem 하나씩 출력. stream으로 수정
+        cartList.forEach(System.out::println);
     }
 
-    //총 금액 계산하는 함수
+    //할인 전 금액 계산하는 함수. stream으로 수정
     public int calculatePrice() {
-        double sumPrice = 0.0;
-        for (CartItem cartItem : cartList) {
-            sumPrice += cartItem.getPrice() * cartItem.getQuantity();
-        }
-        return (int) (sumPrice * 10000); //한국식 돈으로 계산
+        return (int) (cartList.stream().mapToDouble(item -> item.getPrice() * item.getQuantity()).sum() * 10000);
     }
 
 }
