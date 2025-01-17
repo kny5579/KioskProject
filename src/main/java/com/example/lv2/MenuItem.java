@@ -1,4 +1,4 @@
-package com.example.kiosk2;
+package com.example.lv2;
 
 //세부 메뉴 속성을 가지는 클래스
 public class MenuItem {

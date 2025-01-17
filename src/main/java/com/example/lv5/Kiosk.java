@@ -1,4 +1,4 @@
-package com.example.kiosk4;
+package com.example.lv5;
 
 import java.util.List;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 //메뉴 관리 및 사용자 입력 처리
 public class Kiosk {
 
-    List<Menu> menuList;
+    private final List<Menu> menuList;
 
     public Kiosk(List<Menu> menuList) {
         this.menuList = menuList;
@@ -36,13 +36,18 @@ public class Kiosk {
                     exit = true;
                     System.out.println("프로그램을 종료합니다.");
                 } else if (selectMenuNum > 0 && selectMenuNum <= menuList.size()) {
+
                     // 입력 받은 숫자가 올바르다면 인덱스로 활용하여 List에 접근하기
                     Menu selectedMenu = menuList.get(selectMenuNum - 1);
+
                     System.out.println("[ " + selectedMenu.getCategoryName().toUpperCase() + " MENU ]");
+
                     //Menu가 가진 List<MenuItem>을 반복문을 활용하여 메뉴 출력
                     selectedMenu.showMenuItem();
+
                     //아이템 숫자 입력 받기
                     System.out.print("메뉴의 숫자를 입력해주세요: ");
+
                     try {
                         int selectItemNum = scanner.nextInt();
                         if (selectItemNum == 0) {
@@ -58,6 +63,7 @@ public class Kiosk {
                         scanner.next();
                     }
                     System.out.println();
+
                 } else {
                     System.out.println("\n잘못된 선택입니다. 다시 입력해 주세요.");
                 }
