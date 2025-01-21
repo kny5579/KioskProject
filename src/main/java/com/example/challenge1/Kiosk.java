@@ -25,10 +25,7 @@ public class Kiosk {
     public void start() {
         //Scanner 선언
         Scanner scanner = new Scanner(System.in);
-        //반복문 탈출 flag 선언
-        boolean exit = false;
-
-        while (!exit) {
+        while (true) {
             //메인메뉴와 오더메뉴 표시
             displayMainOrder();
 
@@ -37,8 +34,8 @@ public class Kiosk {
             try {
                 int selectMenuNum = scanner.nextInt();
                 if (selectMenuNum == 0) {
-                    exit = true;
                     System.out.println("프로그램을 종료합니다.");
+                    break;
                 } else if (selectMenuNum > 0 && selectMenuNum <= menuList.size()) {
                     // 입력 받은 숫자가 올바르다면 인덱스로 활용하여 List에 접근하기
                     Menu selectedMenu = menuList.get(selectMenuNum - 1);

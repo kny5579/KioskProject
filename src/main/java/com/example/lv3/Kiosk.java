@@ -18,10 +18,8 @@ public class Kiosk {
     public void start() {
         //Scanner 선언
         Scanner scanner = new Scanner(System.in);
-        //반복문 탈출 flag 선언
-        boolean exit = false;
 
-        while (!exit) {
+        while (true) {
             //리스트 안에 있는 MenuItem 하나씩 출력
             System.out.print("[ McDonald's MENU ]\n");
             for (int i = 0; i < menuItems.size(); i++) {
@@ -34,8 +32,8 @@ public class Kiosk {
             try {
                 int selectMenu = scanner.nextInt();
                 if (selectMenu == 0) {
-                    exit = true;
                     System.out.println("프로그램을 종료합니다.");
+                    break;
                 } else if (selectMenu > 0 && selectMenu <= menuItems.size()) {
                     System.out.println("\n선택한 메뉴: " + menuItems.get(selectMenu - 1));
                 } else {
